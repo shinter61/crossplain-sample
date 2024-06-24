@@ -5,7 +5,7 @@ metadata:
 spec:
   forProvider:
     passwordSecretRef:
-      name: db-conn
+      name: example-user-conn
       namespace: default
       key: password
     resourceOptions:
