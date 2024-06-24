@@ -1,0 +1,24 @@
+apiVersion: mysql.sql.crossplane.io/v1alpha1
+kind: Grant
+metadata:
+  name: admin-grant
+spec:
+  forProvider:
+    privileges:
+      - ALL PRIVILEGES
+    userRef:
+      name: example-user
+    databaseRef:
+      name: sbtest
+---
+apiVersion: mysql.sql.crossplane.io/v1alpha1
+kind: Grant
+metadata:
+  name: admin-grant-2
+spec:
+  forProvider:
+    privileges:
+      - PROCESS
+      - USAGE
+    userRef:
+      name: example-user
