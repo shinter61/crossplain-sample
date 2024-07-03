@@ -1,0 +1,16 @@
+apiVersion: mysql.sql.crossplane.io/v1alpha1
+kind: Grant
+metadata:
+  name: app-grant
+spec:
+  forProvider:
+    privileges:
+      - SELECT
+      - INSERT
+      - UPDATE
+      - DELETE
+    userRef:
+      name: example-user-2
+    databaseRef:
+      name: sbtest
+    table: sbtest1
